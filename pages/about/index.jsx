@@ -2,12 +2,12 @@ import React from 'react';
 
 // Components
 
-const Home = () => {
+const About = () => {
     return (
         <div>
-            <h1>Content</h1>
+            <h1>About</h1>
         </div>
     );
 };
 
-export default Home;
+export default About;

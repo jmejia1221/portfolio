@@ -32,6 +32,7 @@
         align-items: center;
         position: absolute;
         opacity: 0;
+        flex-direction: column;
         visibility: hidden;
         background-color: var(--bg-modal);
         &__close {
@@ -45,5 +46,14 @@
     .showMenu {
         opacity: 1;
         visibility: visible;
+    }
+    .icons {
+        display: flex;
+        color: var(--primary);
+        li {
+            cursor: pointer;
+            margin: 1rem 1.5rem;
+            font-size: 2.5rem;
+        }
     }
 }
