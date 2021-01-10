@@ -1,0 +1,41 @@
+:root {
+    // Main portfolio Colors
+    --primary: #5918DF;
+    --secondary: #1A1527;
+
+    --text-color: var(--secondary);
+
+    --bg-color: var(--gray-lightest);
+
+    // Gray scale
+    --gray: #D1D1D1;
+    --gray-light: #E0E0E0;
+    --gray-lightest: #F9F9F9;
+
+    // Alpha colors
+    --alpha-white: rgba(255, 255, 255, .9);
+    --alpha-black: rgba(26, 21, 39, .9);
+
+    --bg-modal: var(--alpha-white);
+}
+
+.dark {
+    // Main portfolio Colors
+    --primary: #F9F9F9;
+    --secondary: #1A1527;
+
+    --text-color: var(--primary);
+
+    --bg-color: var(--secondary);
+
+    // Gray scale
+    --gray: #D1D1D1;
+    --gray-light: #E0E0E0;
+    --gray-lightest: #F9F9F9;
+
+    // Alpha colors
+    --alpha-white: rgba(255, 255, 255, .9);
+    --alpha-black: rgba(26, 21, 39, .9);
+
+    --bg-modal: var(var(--alpha-black));
+}

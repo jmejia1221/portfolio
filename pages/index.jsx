@@ -1,8 +1,22 @@
 import React from 'react';
 
+// Components
+import Header from '../components/Header';
+import Nav from '../components/Nav';
+import NavItem from '../components/Nav/NavItem';
+
 const Home = () => {
     return (
-        <h1>John's portfolio</h1>
+        <div>
+            <Header>
+                <Nav>
+                    <NavItem>About</NavItem>
+                    <NavItem>Playground</NavItem>
+                    <NavItem>Blog</NavItem>
+                    <NavItem>Contact</NavItem>
+                </Nav>
+            </Header>
+        </div>
     );
 };
 

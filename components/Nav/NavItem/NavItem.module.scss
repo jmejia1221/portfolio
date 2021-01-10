@@ -1,0 +1,17 @@
+.item {
+    font-size: 4rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 5rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    a {
+        color: var(--secondary);
+        text-decoration: none;
+        transition: color .5s;
+        &:hover,
+        &:focus {
+            color: var(--primary);
+        }
+    }
+}

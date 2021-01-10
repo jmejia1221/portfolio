@@ -1,0 +1,49 @@
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1;
+    max-width: 5rem;
+    .bar-menu {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-end;
+        &__line {
+            width: 3.5rem;
+            height: .6rem;
+            display: block;
+            margin-bottom: .4rem;
+            background-color: var(--secondary);
+        }
+        &--line-middle {
+            position: relative;
+            right: .5rem;
+        }
+    }
+    .menu {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        background-color: var(--bg-modal);
+        &__close {
+            cursor: pointer;
+            font-size: 5rem;
+            position: absolute;
+            top: 1rem;
+            right: 2.5rem;
+        }
+    }
+    .showMenu {
+        opacity: 1;
+        visibility: visible;
+    }
+}
