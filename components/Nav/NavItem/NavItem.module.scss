@@ -5,6 +5,11 @@
     margin-bottom: 5rem;
     cursor: pointer;
     text-transform: uppercase;
+    &.active {
+        a {
+            color: var(--primary);
+        }
+    }
     a {
         color: var(--secondary);
         text-decoration: none;
