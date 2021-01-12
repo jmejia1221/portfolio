@@ -1,0 +1,49 @@
+.content {
+    padding: 2rem 4rem;
+    .title {
+        font-size: 4rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    .article {
+        .link {
+            color: var(--primary);
+            margin-left: .5rem;
+            font-weight: 600;
+        }
+        .text {
+            margin-bottom: 2rem;
+            font-weight: 400;
+            line-height: 2.5rem;
+        }
+    }
+    .skillsAction {
+        display: flex;
+        justify-content: flex-end;
+        .arrowIcon {
+            margin-left: 1rem;
+        }
+    }
+    .skills {
+        padding: 7rem 4rem;
+        &__title {
+            font-size: 4rem;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+        .section {
+            .article {
+                &__info {
+                    // font-weight: bold;
+                    margin-bottom: 3rem;
+                }
+                &__subtitle {
+                    font-size: 1.6rem;
+                    margin: 1rem 0;
+                }
+            }
+        }
+    }
+}

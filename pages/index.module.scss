@@ -5,6 +5,10 @@
             font-weight: 800;
             color: var(--primary);
             font-size: 5rem;
+            animation: titleAnimation;
+            animation-duration: .5s;
+            animation-delay: .5s;
+            animation-fill-mode: backwards;
         }
         &__subtitle {
             font-weight: 100;
@@ -19,5 +23,14 @@
             font-weight: 600;
             margin: 1.5rem 0 3rem;
         }
+    }
+}
+
+@keyframes titleAnimation {
+    from {
+        transform: translateX(-500px);
+    }
+    100% {
+        transform: translateX(0);
     }
 }

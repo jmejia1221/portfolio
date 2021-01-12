@@ -1,0 +1,65 @@
+.content {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bg-modal);
+    position: absolute;
+    width: 0;
+    opacity: 0;
+    > * {
+        display: none;
+    }
+    &.show {
+        width: 100%;
+        opacity: 1;
+        animation: showModal;
+        animation-fill-mode: forwards;
+        animation-duration: .5s;
+        animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        > * {
+            display: block;
+        }
+    }
+    &.close {
+        width: 100%;
+        animation: closeModal;
+        animation-fill-mode: forwards;
+        animation-duration: .5s;
+        animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        > * {
+            visibility: hidden;
+        }
+    }
+    .closeButton {
+        top: 1rem;
+        right: 2.5rem;
+        font-size: 4.5rem;
+        position: absolute;
+        cursor: pointer;
+    }
+}
+
+@keyframes showModal {
+    from {
+        opacity: 1;
+        visibility: hidden;
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes closeModal {
+    0% {
+        transform: translateX(0);
+    }
+    80% {
+        transform: translateX(-100%);
+    }
+    100% {
+        width: 0;
+        visibility: hidden;
+    }
+}
