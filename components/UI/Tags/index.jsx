@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
 // CSS
@@ -8,8 +9,11 @@ const Tags = (props) => {
 
     if (props.tags && props.tags.length) {
         tags = props.tags.map((tag, i) => {
+            console.log(tag.icon)
             return (
                 <span key={i} className={styles.tag}>
+                    { tag.icon &&
+                        <FontAwesomeIcon className={styles.icon} icon={tag.icon} /> }
                     {tag.name}
                 </span>
             )

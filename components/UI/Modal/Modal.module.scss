@@ -5,11 +5,8 @@
     bottom: 0;
     background-color: var(--bg-modal);
     position: absolute;
-    width: 0;
-    opacity: 0;
-    > * {
-        display: none;
-    }
+    display: none;
+    z-index: 999;
     &.show {
         width: 100%;
         opacity: 1;
@@ -17,19 +14,7 @@
         animation-fill-mode: forwards;
         animation-duration: .5s;
         animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        > * {
-            display: block;
-        }
-    }
-    &.close {
-        width: 100%;
-        animation: closeModal;
-        animation-fill-mode: forwards;
-        animation-duration: .5s;
-        animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        > * {
-            visibility: hidden;
-        }
+        display: block;
     }
     .closeButton {
         top: 1rem;
@@ -48,18 +33,5 @@
     }
     to {
         transform: translateX(0);
-    }
-}
-
-@keyframes closeModal {
-    0% {
-        transform: translateX(0);
-    }
-    80% {
-        transform: translateX(-100%);
-    }
-    100% {
-        width: 0;
-        visibility: hidden;
     }
 }

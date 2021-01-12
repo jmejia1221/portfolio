@@ -15,7 +15,6 @@ const Modal = (props) => {
         modalClasses.push(styles.show);
     } else {
         modalClasses = [styles.content];
-        modalClasses.push(styles.close);
     }
 
     return (

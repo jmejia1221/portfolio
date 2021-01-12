@@ -1,0 +1,51 @@
+.content {
+    padding: 2rem 4rem;
+    .title {
+        font-size: 4rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    .work {
+        max-width: 120rem;
+        display: flex;
+        margin: 0 auto;
+        > * {
+            flex: 1;
+        }
+        .work-content {
+            min-width: 20rem;
+            max-width: 40rem;
+            min-height: 35rem;
+            padding: 5rem 3rem;
+            position: relative;
+        }
+        &__title,
+        &__view {
+            color: var(--gray-lightest);
+        }
+        &__title {
+            font-size: 3.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        &__view {
+            font-size: 1.8rem;
+            display: flex;
+            cursor: pointer;
+            position: absolute;
+            bottom: 8rem;
+            right: 3rem;
+        }
+        &__icon {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            height: 2.8rem;
+            margin-left: 1rem;
+            font-size: 2.5rem;
+            position: relative;
+        }
+    }
+}
