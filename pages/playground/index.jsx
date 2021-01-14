@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // Libs
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,15 +7,22 @@ import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
 // Components
 import Cards from '../../components/Cards';
 import Card from '../../components/Cards/Card';
+import SlideUp from '../../components/UI/SlideUp';
 
 // CSS
 import styles from './Playground.module.scss';
 
 const Playground = () => {
+    const [showSlideUp, setShowSlideUp] = useState(false);
+
+    const slideUpHandler = () => {
+        setShowSlideUp(!showSlideUp);
+    }
+
     return (
         <div className={styles.content}>
             <header>
-                <h1 className={styles.title}>Playground</h1>
+                <h1 onClick={slideUpHandler} className={styles.title}>Playground</h1>
             </header>
             <section className={styles.work}>
                 <Cards>
@@ -60,6 +67,9 @@ const Playground = () => {
                     </Card>
                 </Cards>
             </section>
+            <SlideUp closeSlide={slideUpHandler} isShowSlide={showSlideUp}>
+
+            </SlideUp>
         </div>
     );
 };
