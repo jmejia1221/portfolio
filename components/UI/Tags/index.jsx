@@ -9,7 +9,6 @@ const Tags = (props) => {
 
     if (props.tags && props.tags.length) {
         tags = props.tags.map((tag, i) => {
-            console.log(tag.icon)
             return (
                 <span key={i} className={styles.tag}>
                     { tag.icon &&

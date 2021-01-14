@@ -14,7 +14,9 @@ import styles from './Playground.module.scss';
 const Playground = () => {
     return (
         <div className={styles.content}>
-            <h1 className={styles.title}>Playground</h1>
+            <header>
+                <h1 className={styles.title}>Playground</h1>
+            </header>
             <section className={styles.work}>
                 <Cards>
                     <Card>
