@@ -1,0 +1,23 @@
+[
+    {
+        "id": "task_manager_1",
+        "isActive": true,
+        "name": "Task Manager App",
+        "description": "",
+        "images": []
+    },
+    {
+        "id": "burger_app_2",
+        "isActive": true,
+        "name": "Burger App",
+        "description": "",
+        "images": []
+    },
+    {
+        "id": "github_3",
+        "isActive": true,
+        "name": "Github Search",
+        "description": "",
+        "images": []
+    }
+]

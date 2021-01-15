@@ -3,7 +3,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    position: absolute;
+    position: fixed;
     z-index: 9;
     overflow: hidden;
     overflow-y: scroll;
@@ -30,7 +30,7 @@
 }
 .closeButton {
     color: var(--gray-lightest);
-    position: absolute;
+    position: fixed;
     top: 1rem;
     z-index: 9;
     right: 2rem;

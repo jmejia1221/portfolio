@@ -14,7 +14,7 @@ const SlideUp = (props) => {
     let modalClasses = null;
 
     useEffect(() => {
-        document.body.style.overflow = "hidden"
+        if (modalClasses.includes(styles.show)) document.body.style.overflow = "hidden"
         return () => {
             document.body.style.overflow = "auto"
         }
