@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 // Libs
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,6 +9,7 @@ import axios from '../../config/axiosRequest';
 import Cards from '../../components/Cards';
 import Card from '../../components/Cards/Card';
 import SlideUp from '../../components/UI/SlideUp';
+import SlideInfo from '../../components/ProjectBuilder/SlideInfo';
 
 // CSS
 import styles from './Playground.module.scss';
@@ -16,6 +17,7 @@ import styles from './Playground.module.scss';
 const Playground = () => {
     const [showSlideUp, setShowSlideUp] = useState(false);
     const [projectsData, setProjectsData] = useState([]);
+    const [projectId, setProjectId] = useState([]);
 
     useEffect(() => {
         axios('api/projects/')
@@ -27,8 +29,24 @@ const Playground = () => {
             });
     }, []);
 
-    const slideUpHandler = () => {
+    let slideContent = null;
+    const slideUpHandler = (id) => {
         setShowSlideUp(!showSlideUp);
+
+        if (!showSlideUp) {
+            const newProjectId = projectsData.filter(project => {
+                return project.id === id;
+            });
+            setProjectId(newProjectId);
+        }
+    }
+
+    if (projectId && projectId.length) {
+        slideContent = projectId.map(project => {
+            return (
+                <SlideInfo name={project.name} />
+            )
+        });
     }
 
     let renderCard = null;
@@ -40,7 +58,7 @@ const Playground = () => {
                         <h1 className={styles['work__title']}>
                             {card.name}
                         </h1>
-                        <span onClick={slideUpHandler} className={styles['work__view']}>
+                        <span onClick={() => slideUpHandler(card.id)} className={styles['work__view']}>
                             View
                             <FontAwesomeIcon
                                 className={styles['work__icon']}
@@ -63,7 +81,7 @@ const Playground = () => {
                 </Cards>
             </section>
             <SlideUp closeSlide={slideUpHandler} isShowSlide={showSlideUp}>
-
+                {slideContent}
             </SlideUp>
         </div>
     );

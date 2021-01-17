@@ -11,16 +11,24 @@ const SocialLinks = () => {
     return (
         <ul className={styles.icons}>
             <li>
-                <FontAwesomeIcon icon={faGithub} />
+                <a target="_blank" href="https://github.com/jmejia1221">
+                    <FontAwesomeIcon icon={faGithub} />
+                </a>
             </li>
             <li>
-                <FontAwesomeIcon icon={faLinkedin} />
+                <a target="_blank" href="https://www.linkedin.com/in/jmejia1221/">
+                    <FontAwesomeIcon icon={faLinkedin} />
+                </a>
             </li>
             <li>
-                <FontAwesomeIcon icon={faDribbble} />
+                <a target="_blank" href="https://dribbble.com/jmejia1221">
+                    <FontAwesomeIcon icon={faDribbble} />
+                </a>
             </li>
             <li>
-                <FontAwesomeIcon icon={faCodepen} />
+                <a target="_blank" href="https://codepen.io/jmejia1221/pens">
+                    <FontAwesomeIcon icon={faCodepen} />
+                </a>
             </li>
         </ul>
     );
