@@ -42,3 +42,17 @@ $breakpoint argument choices:
         }
     }
 }
+
+// Gradients
+/*
+    examples:
+        $list1: $blue 0%,$blue 33%,$green 33%,$green 66%, $orange 66%, $orange 100%;
+        @include gradient(-45deg, $list1);
+        @include gradient(left, $list2);
+*/
+@mixin gradient($direction, $list) { 
+    background: -webkit-linear-gradient($direction, $list);
+    background: -moz-linear-gradient($direction, $list);
+    background: -o-linear-gradient($direction, $list);
+    background: linear-gradient($direction, $list);  
+}

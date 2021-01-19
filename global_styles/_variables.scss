@@ -1,3 +1,28 @@
+// Project colors
+$managerPrimary: #361952;
+$managerSecondary: #442267;
+$managerColors: $managerSecondary,
+                $managerPrimary 60%;
+
+$burgerPrimary: #f58b13;
+$burgerSecondary: #b65b07;
+$burgerColors: $burgerPrimary,
+               $burgerSecondary 60%;
+
+$searchPrimary: #2f5ecc;
+$searchSecondary: #183e97;
+$searchColors: $searchPrimary,
+               $searchSecondary 60%;
+
+$subscriptionPrimary: #0d204e;
+$subscriptionSecondary: #191d29;
+$subscriptionColors: $subscriptionPrimary,
+                     $subscriptionSecondary 60%;
+
+$githubPrimary: #4f1cc5;
+$githubSecondary: #2e0985;
+$githubColors: $githubPrimary,
+                     $githubSecondary 60%;
 // Main portfolio Colors
 $primary: #5918DF;
 $secondary: #1A1527;

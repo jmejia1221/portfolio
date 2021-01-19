@@ -13,7 +13,7 @@ const Tags = (props) => {
                 <span key={i} className={styles.tag}>
                     { tag.icon &&
                         <FontAwesomeIcon className={styles.icon} icon={tag.icon} /> }
-                    {tag.name}
+                    {tag.name ? tag.name : tag}
                 </span>
             )
         });

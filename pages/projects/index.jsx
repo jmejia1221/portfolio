@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 // Libs
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,29 +12,35 @@ import SlideUp from '../../components/UI/SlideUp';
 import SlideInfo from '../../components/ProjectBuilder/SlideInfo';
 
 // CSS
-import styles from './Playground.module.scss';
+import styles from './Projects.module.scss';
 
-const Playground = () => {
+export async function getServerSideProps(context) {
+    const res = await axios('api/projects/');
+    const data = await res.data.data;
+
+    if (!data) {
+        return {
+            notFound: true,
+        }
+    }
+
+    return {
+        props: {
+            data
+        }
+    }
+}
+
+const Projects = ({ data }) => {
     const [showSlideUp, setShowSlideUp] = useState(false);
-    const [projectsData, setProjectsData] = useState([]);
     const [projectId, setProjectId] = useState([]);
-
-    useEffect(() => {
-        axios('api/projects/')
-            .then(response => {
-                setProjectsData(response.data.data);
-            })
-            .catch(err => {
-                console.log(err)
-            });
-    }, []);
 
     let slideContent = null;
     const slideUpHandler = (id) => {
         setShowSlideUp(!showSlideUp);
 
         if (!showSlideUp) {
-            const newProjectId = projectsData.filter(project => {
+            const newProjectId = data.filter(project => {
                 return project.id === id;
             });
             setProjectId(newProjectId);
@@ -44,16 +50,18 @@ const Playground = () => {
     if (projectId && projectId.length) {
         slideContent = projectId.map(project => {
             return (
-                <SlideInfo name={project.name} />
+                <SlideInfo
+                    key={project.id}
+                    project={project} />
             )
         });
     }
 
     let renderCard = null;
-    if (projectsData.length) {
-        renderCard = projectsData.map(card => {
+    if (data.length) {
+        renderCard = data.map(card => {
             return (
-                <Card key={card.id}>
+                <Card key={card.id} color={card.key}>
                     <div className={styles['work-content']}>
                         <h1 className={styles['work__title']}>
                             {card.name}
@@ -87,4 +95,4 @@ const Playground = () => {
     );
 };
 
-export default Playground;
+export default Projects;

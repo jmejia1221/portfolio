@@ -1,22 +1,52 @@
 [
     {
         "id": "task_manager_1",
+        "key": "manager",
         "isActive": true,
+        "type": "Project",
         "name": "Task Manager App",
+        "tags": ["React Js", "Javascript", "CSS", "Firebase"],
         "description": "",
-        "images": []
+        "link": "https://simetrik-lyrpnao8g.vercel.app/",
+        "images": ["search_challenge.png"]
     },
     {
         "id": "burger_app_2",
+        "key": "burger",
         "isActive": true,
-        "name": "Burger App",
+        "type": "Project",
+        "tags": ["ReactJs", "Javascript", "CSS", "Firebase"],
+        "name": "Burger Builder App",
         "description": "",
         "images": []
     },
     {
-        "id": "github_3",
+        "id": "search_challenge_1",
+        "key": "search",
+        "type": "Challenge",
         "isActive": true,
-        "name": "Github Search",
+        "name": "Search Challenge",
+        "tags": ["ReactJs", "SCSS", "Javascript", "CSS", "NextJs"],
+        "description": "",
+        "images": []
+    },
+    {
+        "id": "subscription_challenge_2",
+        "key": "subscription",
+        "isActive": true,
+        "type": "Project",
+        "tags": ["React Js", "Javascript", "CSS", "NextJs"],
+        "name": "Subscription Page Challenge",
+        "description": "",
+        "images": []
+    },
+    {
+        "id": "github_challenge_3",
+        "key": "github",
+        "isActive": true,
+        "type": "Challenge",
+        "tags": ["React Js", "SCSS", "Javascript", "CSS", "NextJs"],
+        "name": "Github Search Challenge",
         "description": "",
         "images": []
     }
