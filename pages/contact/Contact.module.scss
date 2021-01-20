@@ -1,10 +1,8 @@
-
 .content {
-    padding: 2rem 4rem;
+    padding: 4rem 4rem;
     .title {
         font-size: 4rem;
         font-weight: 600;
-        text-transform: capitalize;
         text-align: center;
         margin-bottom: 4rem;
         font-weight: 900;
@@ -26,6 +24,40 @@
             display: inline-block;
             margin-top: 1rem;
             border-bottom: 3px solid var(--primary);
+        }
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .container {
+        max-width: 75%;
+        margin: 0 auto;
+        .content {
+            margin: 8vw auto;
+            padding-top: 0;
+            position: relative;
+            .header {
+                .title {
+                    font-size: clamp(5vw, 7vw, 6vw); 
+                    text-align: left;
+                    margin-bottom: 2rem;
+                }
+            }
+            .main {
+                .subtitle {
+                    font-size: 3vw;
+                    font-size: clamp(3vw, 3vw, 3vw); 
+                }
+                .text {
+                    font-size: 2vw;
+                }
+                .touch {
+                    &__email {
+                        margin-top: 1rem;
+                        font-size: 2.5vw;
+                    }
+                }
+            }
         }
     }
 }
