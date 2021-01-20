@@ -1,0 +1,87 @@
+.content {
+    padding: 2rem 4rem;
+    .title {
+        font-size: 4rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    .article {
+        .link {
+            color: var(--primary);
+            margin-left: .5rem;
+            font-weight: 600;
+        }
+        .text {
+            margin-bottom: 2rem;
+            font-weight: 400;
+            line-height: 2.5rem;
+        }
+    }
+    .skillsAction {
+        display: flex;
+        justify-content: flex-end;
+        .arrowIcon {
+            margin-left: 1rem;
+        }
+    }
+}
+.skills {
+    padding: 7rem 4rem;
+    &__title {
+        font-size: 4rem;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+    }
+    .section {
+        .article {
+            &__info {
+                // font-weight: bold;
+                margin-bottom: 3rem;
+            }
+            &__subtitle {
+                font-size: 1.6rem;
+                margin: 1rem 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        height: calc(100vh - 8rem);
+        .content {
+            max-width: 85rem;
+            font-size: 1.6rem;
+            padding-top: 10rem;
+            position: relative;
+            .title {
+                font-weight: 800;
+                font-size: 7rem;
+                text-align: left;
+                margin-bottom: 2rem;
+            }
+            .article {
+                .text {
+                    padding-left: 11rem;
+                }
+                .greets {
+                    margin-bottom: 0rem;
+                }
+                .legend {
+                    padding-left: 0;
+                    max-width: 30rem;
+                    margin-top: 4rem;
+                }
+            }
+        }
+    }
+    .skills {
+        font-size: 1.6rem;
+        max-width: 80rem;
+        margin: 5rem auto 0;
+    }
+}
