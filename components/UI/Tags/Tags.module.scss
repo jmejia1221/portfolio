@@ -1,0 +1,16 @@
+.tag {
+    color: var(--gray-lightest);
+    background-color: var(--primary);
+    padding: .5rem 2rem;
+    border-radius: .3rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    &:last-child {
+        margin-right: 0;
+    }
+    .icon {
+        margin-right: 1rem;
+    }
+}

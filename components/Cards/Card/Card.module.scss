@@ -1,0 +1,25 @@
+@import '../../../global_styles/variables';
+@import '../../../global_styles/mixins';
+.content {
+    flex: 1;
+    padding: .5rem;
+    .innerContent {
+        border-radius: 1rem;
+        background-color: var(--secondary);
+        &.manager {
+            @include gradient(-45deg, $managerColors);
+        }
+        &.burger {
+            @include gradient(-45deg, $burgerColors);
+        }
+        &.search {
+            @include gradient(-45deg, $searchColors);
+        }
+        &.subscription {
+            @include gradient(-45deg, $subscriptionColors);
+        }
+        &.github {
+            @include gradient(-45deg, $githubColors);
+        }
+    }
+}
