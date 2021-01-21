@@ -1,12 +1,17 @@
-.content {
+.container {
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: var(--bg-modal);
-    position: absolute;
+    position: fixed;
     display: none;
     z-index: 999;
+    .content {
+        overflow: hidden;
+        overflow-y: auto;
+        max-height: 100%;
+    }
     &.show {
         width: 100%;
         opacity: 1;
@@ -17,11 +22,16 @@
         display: block;
     }
     .closeButton {
-        top: 1rem;
-        right: 2.5rem;
         font-size: 4.5rem;
         position: absolute;
         cursor: pointer;
+        display: flex;
+        left: 0;
+        right: 0;
+        justify-content: flex-end;
+        background: var(--gray-lightest);
+        top: 0;
+        padding: 1rem 3rem;
     }
 }
 

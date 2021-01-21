@@ -62,11 +62,11 @@ const Projects = ({ data }) => {
         renderCard = data.map(card => {
             return (
                 <Card key={card.id} color={card.key}>
-                    <div className={styles['work-content']}>
+                    <div onClick={() => slideUpHandler(card.id)} className={styles['work-content']}>
                         <h1 className={styles['work__title']}>
                             {card.name}
                         </h1>
-                        <span onClick={() => slideUpHandler(card.id)} className={styles['work__view']}>
+                        <span className={styles['work__view']}>
                             View
                             <FontAwesomeIcon
                                 className={styles['work__icon']}
