@@ -6,9 +6,7 @@ const porjects = async(req, res) => {
 
     const id = req.query.id;
 
-    const dbCopy = [...db];
-
-    const dbById = dbCopy.filter(item => {
+    const dbById = db.filter(item => {
         return item.id === id
     });
 
