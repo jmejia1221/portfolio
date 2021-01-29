@@ -14,10 +14,9 @@ import SlideInfo from '../../components/ProjectBuilder/SlideInfo';
 // CSS
 import styles from './Projects.module.scss';
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
     const res = await axios('api/projects/');
     const data = await res.data.data;
-
     if (!data) {
         return {
             notFound: true,
@@ -35,6 +34,7 @@ const Projects = ({ data }) => {
     const [showSlideUp, setShowSlideUp] = useState(false);
     const [projectId, setProjectId] = useState([]);
 
+    console.log('data', data)
     let slideContent = null;
     const slideUpHandler = (id) => {
         setShowSlideUp(!showSlideUp);
@@ -48,13 +48,11 @@ const Projects = ({ data }) => {
     }
 
     if (projectId && projectId.length) {
-        slideContent = projectId.map(project => {
-            return (
-                <SlideInfo
-                    key={project.id}
-                    project={project} />
-            )
-        });
+        slideContent = (
+            <SlideInfo
+                key={projectId[0].id}
+                project={projectId[0]} />
+        );
     }
 
     let renderCard = null;
