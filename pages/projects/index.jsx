@@ -34,7 +34,6 @@ const Projects = ({ data }) => {
     const [showSlideUp, setShowSlideUp] = useState(false);
     const [projectId, setProjectId] = useState([]);
 
-    console.log('data', data)
     let slideContent = null;
     const slideUpHandler = (id) => {
         setShowSlideUp(!showSlideUp);

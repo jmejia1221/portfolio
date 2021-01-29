@@ -2,18 +2,6 @@ import React, { useState } from 'react';
 
 // Libs
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import { 
-    faAngular,
-    faCss3Alt,
-    faHtml5,
-    faJsSquare,
-    faReact,
-    faSass,
-    faVuejs,
-    faWordpress,
-    faGit,
-    faLess
-} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // Components
@@ -21,38 +9,17 @@ import Button from '@/components/UI/Button';
 import Modal from '@/components/UI/Modal';
 import Tags from '@/components/UI/Tags';
 
+// Utility
+import {
+    LANGUAGES,
+    MARKUP_CASCADE,
+    FRAMEWORKS,
+    DESIGN_TOOLS,
+    OTHER
+} from '../../utility/consts';
+
 // CSS
 import styles from './About.module.scss';
-
-const languages = [
-    {name: 'Javascript', value: 'javascript', icon: faJsSquare}
-];
-
-const markup_cascade = [
-    {name: 'HTML', value: 'html', icon: faHtml5},
-    {name: 'CSS', value: 'css', icon: faCss3Alt}
-];
-
-const frameworks = [
-    {name: 'Angularjs', value: 'angularjs', icon: faAngular},
-    {name: 'Reactjs', value: 'reactjs', icon: faReact},
-    {name: 'Vuejs', value: 'vuejs', icon: faVuejs},
-    {name: 'jQuery', value: 'jquery'}
-];
-
-const design_tools = [
-    {name: 'Illustrator', value: 'illustrator'},
-    {name: 'Adobe XD', value: 'xd'}
-];
-
-const other = [
-    {name: 'Wordpress', value: 'wordpress', icon: faWordpress},
-    {name: 'Git', value: 'git', icon: faGit},
-    {name: 'Sass', value: 'sass', icon: faSass},
-    {name: 'Less', value: 'less', icon: faLess},
-    {name: 'BEM', value: 'bem'},
-    {name: 'Firebase', value: 'firebase'}
-];
 
 const About = () => {
     const [showModal, setShowModal] = useState(false);
@@ -103,23 +70,23 @@ const About = () => {
                             <h4 className={styles['article__subtitle']}>
                                 - Programming Languages
                             </h4>
-                            <Tags tags={languages} />
+                            <Tags tags={LANGUAGES} />
                             <h4 className={styles['article__subtitle']}>
                                 - Markup & Cascade languages
                             </h4>
-                            <Tags tags={markup_cascade} />
+                            <Tags tags={MARKUP_CASCADE} />
                             <h4 className={styles['article__subtitle']}>
                                 - Frameworks
                             </h4>
-                            <Tags tags={frameworks} />
+                            <Tags tags={FRAMEWORKS} />
                             <h4 className={styles['article__subtitle']}>
                                 - Design Tools
                             </h4>
-                            <Tags tags={design_tools} />
+                            <Tags tags={DESIGN_TOOLS} />
                             <h4 className={styles['article__subtitle']}>
                                 - Others
                             </h4>
-                            <Tags tags={other} />
+                            <Tags tags={OTHER} />
                         </article>
                     </section>
                 </div>
