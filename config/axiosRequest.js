@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const isProd = process.env.NODE_ENV === 'production';
 const host = isProd ?
-    'https://portfolio-inky-eta.vercel.app/' :
+    'https://johnmejia.co/' :
     'http://localhost:3000/';
 
 const instance = axios.create({
