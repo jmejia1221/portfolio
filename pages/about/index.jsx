@@ -17,9 +17,9 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // Components
-import Button from '../../components/UI/Button';
-import Modal from '../../components/UI/Modal';
-import Tags from '../../components/UI/Tags';
+import Button from '@/components/UI/Button';
+import Modal from '@/components/UI/Modal';
+import Tags from '@/components/UI/Tags';
 
 // CSS
 import styles from './About.module.scss';

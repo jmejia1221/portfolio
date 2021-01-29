@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 // Components
-import Tags from '../../UI/Tags';
+import Tags from '@/components/UI/Tags';
 
 // CSS
 import styles from './SlideInfo.module.scss';

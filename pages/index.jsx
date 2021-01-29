@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Components
-import SocialLinks from '../components/Nav/SocialLinks';
+import SocialLinks from '@/components/Nav/SocialLinks';
 
 // CSS
 import styles from './index.module.scss';

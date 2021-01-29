@@ -6,10 +6,10 @@ import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
 import axios from '../../config/axiosRequest';
 
 // Components
-import Cards from '../../components/Cards';
-import Card from '../../components/Cards/Card';
-import SlideUp from '../../components/UI/SlideUp';
-import SlideInfo from '../../components/ProjectBuilder/SlideInfo';
+import Cards from '@/components/Cards';
+import Card from '@/components/Cards/Card';
+import SlideUp from '@/components/UI/SlideUp';
+import SlideInfo from '@/components/ProjectBuilder/SlideInfo';
 
 // CSS
 import styles from './Projects.module.scss';
