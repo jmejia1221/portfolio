@@ -4,11 +4,10 @@ import React, { useState } from 'react';
 import styles from './Switch.module.scss';
 
 const Switch = (props) => {
-
     return (
-        <div className={styles.content}>
+        <div onClick={props.clicked} className={styles.content}>
             <label className={styles['switch__label']} htmlFor="switch"></label>
-            <input className={styles['switch__input']} id="switch" type="checkbox" />
+            <input defaultChecked={props.isDark === 'dark'} className={styles['switch__input']} id="switch" type="checkbox" />
             <span className={styles['switch__ball']} htmlFor="switch"></span>
         </div>
     );

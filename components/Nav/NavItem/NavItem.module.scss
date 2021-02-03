@@ -7,11 +7,11 @@
     text-transform: uppercase;
     &.active {
         a {
-            color: var(--primary);
+            color: var(--primary-hover);
         }
     }
     a {
-        color: var(--secondary);
+        color: var(--seconday-button);
         text-decoration: none;
         transition: color .5s;
     }
@@ -23,7 +23,7 @@
         a {
             &:hover,
             &:focus {
-                color: var(--primary);
+                color: var(--primary-hover);
             }
         }
     }

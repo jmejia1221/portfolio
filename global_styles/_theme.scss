@@ -3,7 +3,11 @@
     --primary: #5918DF;
     --secondary: #1A1527;
 
+    --primary-hover: #5918DF;
+    --seconday-button: #1A1527;
+
     --text-color: var(--secondary);
+    --text-color-seconday: var(--gray-lightest);
 
     --bg-color: var(--gray-lightest);
 
@@ -19,6 +23,20 @@
     --bg-modal: var(--gray-lightest);
 
     --max-width: 102.4rem;
+    --managerPrimary: #361952;
+    --managerSecondary: #442267;
+
+    --burgerPrimary: #f58b13;
+    --burgerSecondary: #b65b07;
+
+    --searchPrimary: #2f5ecc;
+    --searchSecondary: #183e97;
+
+    --subscriptionPrimary: #0d204e;
+    --subscriptionSecondary: #191d29;
+
+    --githubPrimary: #4f1cc5;
+    --githubSecondary: #2e0985;
 }
 
 .dark {
@@ -26,7 +44,12 @@
     --primary: #F9F9F9;
     --secondary: #1A1527;
 
+    --primary-hover: #5918DF;
+    --seconday-button: #F9F9F9;
+
     --text-color: var(--primary);
+
+    --text-color-seconday: var(--secondary);
 
     --bg-color: var(--secondary);
 
@@ -39,5 +62,19 @@
     --alpha-white: rgba(255, 255, 255, .9);
     --alpha-black: rgba(26, 21, 39, .9);
 
-    --bg-modal: var(var(--alpha-black));
+    --bg-modal: var(--secondary);
+    --managerPrimary: #f8f8f8;
+    --managerSecondary: #eee;
+
+    --burgerPrimary: #f8f8f8;
+    --burgerSecondary: #eee;
+
+    --searchPrimary: #f8f8f8;
+    --searchSecondary: #eee;
+
+    --subscriptionPrimary: #f8f8f8;
+    --subscriptionSecondary: #eee;
+
+    --githubPrimary: #f8f8f8;
+    --githubSecondary: #eee;
 }
