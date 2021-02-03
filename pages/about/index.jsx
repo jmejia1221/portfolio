@@ -76,7 +76,7 @@ const About = () => {
                             </h4>
                             <Tags tags={MARKUP_CASCADE} />
                             <h4 className={styles['article__subtitle']}>
-                                - Frameworks
+                                - Frameworks & Libraries
                             </h4>
                             <Tags tags={FRAMEWORKS} />
                             <h4 className={styles['article__subtitle']}>

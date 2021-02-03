@@ -39,5 +39,6 @@ export const OTHER = [
     {name: 'Sass', value: 'sass', icon: faSass},
     {name: 'Less', value: 'less', icon: faLess},
     {name: 'BEM', value: 'bem'},
-    {name: 'Firebase', value: 'firebase'}
+    {name: 'Firebase', value: 'firebase'},
+    {name: 'And More...', value: 'more'}
 ];
