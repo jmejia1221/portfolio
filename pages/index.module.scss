@@ -48,6 +48,7 @@
             left: 50%;
             transform: translate(-50%, -50%) scale(1.2);
             position: absolute;
+            min-width: 620px;
             .header {
                 &__title {
                     font-size: 9.5rem;

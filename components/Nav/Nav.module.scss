@@ -48,6 +48,14 @@
         .menuList {
             margin-top: 3rem;
         }
+        .navContent {
+            ul:last-child {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                flex: 1 100%;
+            }
+        }
     }
     .showMenu {
         opacity: 1;
@@ -60,6 +68,11 @@
         .menu {
             .menuList {
                 margin-top: 0;
+            }
+            .navContent {
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
             }
         }
     }

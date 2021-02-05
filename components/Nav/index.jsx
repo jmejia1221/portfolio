@@ -46,10 +46,12 @@ const Nav = (props) => {
                     className={styles['menu__close']}>
                     <FontAwesomeIcon icon={faTimes} />
                 </span>
-                <ul className={styles.menuList}>
-                    {props.children}
-                </ul>
-                <SocialLinks />
+                <div className={styles.navContent}>
+                    <ul className={styles.menuList}>
+                        {props.children}
+                    </ul>
+                    <SocialLinks />
+                </div>
             </nav>
         </div>
     );

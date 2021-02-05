@@ -8,7 +8,7 @@
         "tags": ["React Js", "Javascript", "CSS", "Firebase"],
         "description": "",
         "link": "https://anomalos.web.app/",
-        "images": ["search_challenge.png"]
+        "images": []
     },
     {
         "id": "burger_app_2",
@@ -19,7 +19,7 @@
         "name": "Burger Builder App",
         "description": "",
         "link": "https://burguer-bd0ec.web.app/",
-        "images": []
+        "images": ["burger_1.png", "burger_2.png", "burger_3.png", "burger_4.png"]
     },
     {
         "id": "search_challenge_1",
@@ -30,7 +30,7 @@
         "tags": ["ReactJs", "SCSS", "Javascript", "CSS", "NextJs"],
         "link": "https://simetrik.vercel.app/",
         "description": "",
-        "images": ["search_challenge.png"]
+        "images": ["search_challenge_1.png", "search_challenge_2.png"]
     },
     {
         "id": "subscription_challenge_2",
@@ -41,7 +41,7 @@
         "name": "Subscription Page Challenge",
         "description": "",
         "link": "https://suscription-page.vercel.app/",
-        "images": []
+        "images": ["subscription_1.png"]
     },
     {
         "id": "github_challenge_3",
@@ -52,6 +52,6 @@
         "name": "Github Search Challenge",
         "link": "https://github-search-sigma.vercel.app/",
         "description": "",
-        "images": []
+        "images": ["github_1.png", "github_2.png"]
     }
 ]

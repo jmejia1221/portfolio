@@ -17,16 +17,10 @@
                 margin-bottom: 1rem;
             }
         }
-        .imageContent {
-            box-shadow: 0 .8rem 2rem rgba(0,0,0,0.1);
-            margin-bottom: .5rem;
-        }
         .link {
             display: flex;
             justify-content: flex-end;
-            // border-bottom: 1px dashed var(--gray);
-            // padding-bottom: 1rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 5.5rem;
             .icon {
                 margin-right: 1rem;
             }
@@ -42,6 +36,25 @@
                     border-color: var(--primary);
                     color: var(--primary);
                 }
+            }
+        }
+        .imagesContent {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 0 auto;
+            .imageContent {
+                box-shadow: 0 .8rem 2rem rgba(0,0,0,0.1);
+                flex: 1 2 48%;
+                border-radius: 1rem;
+                overflow: hidden;
+                margin-right: 1rem;
+                margin-bottom: 1rem;
+            }
+            .inProgress {
+                font-size: 1.6rem;
+                font-weight: bold;
+                color: var(--text-color);
             }
         }
     }

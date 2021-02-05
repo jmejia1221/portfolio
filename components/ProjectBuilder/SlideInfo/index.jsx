@@ -25,11 +25,13 @@ const SlideInfo = (props) => {
                         src={`/${image}`}
                         alt="me"
                         layout="responsive"
-                        width="auto"
-                        height="auto" />
+                        width={500}
+                        height={380} />
                 </div>
             ); 
         })
+    } else {
+        imagesRendering = <p className={styles.inProgress}>Project in progress</p>
     }
 
     if (props.project.tags && props.project.tags.length) {
@@ -46,7 +48,7 @@ const SlideInfo = (props) => {
                     <h3 className={styles['tags__title']}>Skills Used</h3>
                     {tagsRendering}
                 </div>
-                { props.project.link && (
+                { (props.project.link && props.project.images.length) ? (
                     <div className={styles.link}>
                         <a
                             target="_blank"
@@ -57,8 +59,10 @@ const SlideInfo = (props) => {
                             Visit
                         </a>
                     </div>
-                ) }
-                {imagesRendering}
+                ) : null }
+                <div className={styles.imagesContent}>
+                    {imagesRendering}
+                </div>
             </section>
         </div>
     );
