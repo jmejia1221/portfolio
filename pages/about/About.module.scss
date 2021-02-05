@@ -56,7 +56,6 @@
         .content {
             max-width: 85rem;
             font-size: 1.6rem;
-            padding-top: 10rem;
             position: relative;
             .title {
                 font-weight: 800;
@@ -82,6 +81,14 @@
     .skills {
         font-size: 1.6rem;
         max-width: 80rem;
-        margin: 5rem auto 0;
+        margin: 2rem auto 0;
+    }
+}
+
+@media screen and (min-width: 1450px) {
+    .container {
+        .content {
+            padding-top: 10rem;
+        }
     }
 }

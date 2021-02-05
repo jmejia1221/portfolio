@@ -46,3 +46,13 @@
         }
     }
 }
+
+@media screen and (min-width: 700px) {
+    .content {
+        padding-bottom: 5rem;
+        .title {
+            font-size: 5rem;
+            font-weight: 800;
+        }
+    }
+}
