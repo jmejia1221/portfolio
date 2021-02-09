@@ -46,7 +46,7 @@ const About = () => {
                         get their product ideas rolling.</strong>
                         </p>
                         <p className={`${styles.text} ${styles.legend}`}>
-                            Feel free to check <a className={styles.link} target="_blank" href="">my resume</a>.
+                            Feel free to check <a className={styles.link} target="_blank" href="/resume.pdf">my resume</a>.
                         </p>
                     </article>
                     <div className={styles.skillsAction}>
