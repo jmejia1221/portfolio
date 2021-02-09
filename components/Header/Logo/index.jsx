@@ -19,14 +19,14 @@ const Logo = (props) => {
                     height="40"
                     src="/logo_white.svg"
                     className={styles.icon}
-                    alt="Logo John Mejia Black" />
+                    alt="John Mejia" />
             ) : (
                 <Image
                     width="40"
                     height="40"
                     src="/logo_black.svg"
                     className={styles.icon}
-                    alt="Logo John Mejia Black" />
+                    alt="John Mejia" />
             )}
         </span>
     );
