@@ -18,7 +18,7 @@ const SlideUp = (props) => {
         return () => {
             document.body.style.overflow = "auto"
         }
-    })
+    }, [])
 
     if (props.isShowSlide) {
         modalClasses = [styles.content];

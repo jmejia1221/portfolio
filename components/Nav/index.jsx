@@ -17,7 +17,7 @@ const Nav = (props) => {
         return () => {
             if (toggleMenu) setToggleMenu(false);
         };
-    });
+    }, []);
 
     let menuClasses = [styles.menu];
 

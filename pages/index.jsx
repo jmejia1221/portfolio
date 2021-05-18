@@ -16,7 +16,9 @@ const Home = () => {
                     <h1 className={styles['header__title']}>John Mejia</h1>
                 </header>
                 <section className={styles.main}>
-                    <p className={styles['main__paragraph']}>Front end developer and UI designer based in Medellin - Colombia</p>
+                    <p className={styles['main__paragraph']}>
+                        Front end developer and UI designer based in Medellin - Colombia
+                    </p>
                     <SocialLinks />
                 </section>
             </div>
