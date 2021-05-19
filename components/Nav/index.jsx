@@ -10,14 +10,14 @@ import SocialLinks from './SocialLinks';
 // CSS
 import styles from './Nav.module.scss';
 
-const Nav = (props) => {
+const Nav = ({children}) => {
     const [toggleMenu, setToggleMenu] = useState(false);
 
     useEffect(() => {
         return () => {
             if (toggleMenu) setToggleMenu(false);
         };
-    }, []);
+    });
 
     let menuClasses = [styles.menu];
 
@@ -36,9 +36,9 @@ const Nav = (props) => {
             <span
                 onClick={toggleMenuHandler}
                 className={styles['bar-menu']}>
-                <span className={`${styles['bar-menu__line']}`}></span>
-                <span className={`${styles['bar-menu__line']} ${styles['bar-menu--line-middle']}`}></span>
-                <span className={`${styles['bar-menu__line']}`}></span>
+                <span className={`${styles['bar-menu__line']}`} />
+                <span className={`${styles['bar-menu__line']} ${styles['bar-menu--line-middle']}`} />
+                <span className={`${styles['bar-menu__line']}`} />
             </span>
             <nav className={menuClasses.join(' ')}>
                 <span
@@ -48,7 +48,7 @@ const Nav = (props) => {
                 </span>
                 <div className={styles.navContent}>
                     <ul className={styles.menuList}>
-                        {props.children}
+                        {children}
                     </ul>
                     <SocialLinks />
                 </div>
