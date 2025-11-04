@@ -9,25 +9,28 @@ import styles from './Header.module.scss';
 
 
 const Header = (props) => {
-    const [isDark, setIsDark] = useState('isDark');
+    const [isDark, setIsDark] = useState(() => {
+        if (typeof window !== 'undefined') {
+            return localStorage.getItem('isDark');
+        }
+        return null;
+    });
 
     useEffect(() => {
-        const isDark = localStorage.getItem('isDark');
-        setIsDark(isDark);
         if (isDark === 'dark') {
             document.body.classList.add('dark');
-            localStorage.setItem("isDark", "dark");
+        } else {
+            document.body.classList.remove('dark');
         }
-    }, [])
+    }, [isDark])
 
     const switchHandler = () => {
-        setIsDark(localStorage.getItem('isDark'));
         if (isDark === 'dark') {
-            document.body.classList.remove('dark');
             localStorage.removeItem('isDark');
+            setIsDark(null);
         } else {
-            document.body.classList.add('dark');
             localStorage.setItem("isDark", "dark");
+            setIsDark('dark');
         }
     }
 

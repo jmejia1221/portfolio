@@ -14,11 +14,13 @@ const SlideUp = (props) => {
     let modalClasses = null;
 
     useEffect(() => {
-        if (modalClasses.includes(styles.show)) document.body.style.overflow = "hidden"
-        return () => {
-            document.body.style.overflow = "auto"
+        if (props.isShowSlide) {
+            document.body.style.overflow = "hidden";
         }
-    }, [])
+        return () => {
+            document.body.style.overflow = "auto";
+        }
+    }, [props.isShowSlide])
 
     if (props.isShowSlide) {
         modalClasses = [styles.content];

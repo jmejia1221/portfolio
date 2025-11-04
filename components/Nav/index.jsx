@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 // Libs
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,12 +12,6 @@ import styles from './Nav.module.scss';
 
 const Nav = ({children}) => {
     const [toggleMenu, setToggleMenu] = useState(false);
-
-    useEffect(() => {
-        return () => {
-            if (toggleMenu) setToggleMenu(false);
-        };
-    });
 
     let menuClasses = [styles.menu];
 
