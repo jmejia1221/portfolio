@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 // Libs
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
-import axios from '../../config/axiosRequest';
 
 // Components
 import Cards from '@/components/Cards';
@@ -11,12 +10,16 @@ import Card from '@/components/Cards/Card';
 import SlideUp from '@/components/UI/SlideUp';
 import SlideInfo from '@/components/ProjectBuilder/SlideInfo';
 
+// Data
+import projectsData from '../../database/projects.json';
+
 // CSS
 import styles from './Projects.module.scss';
 
 export async function getStaticProps(context) {
-    const res = await axios('api/projects/');
-    const data = await res.data.data;
+    // Directly use the imported data instead of making an HTTP request during build
+    const data = projectsData;
+
     if (!data) {
         return {
             notFound: true,
